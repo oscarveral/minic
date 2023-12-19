@@ -7,4 +7,4 @@ Se generá código MIPS que puede ser ejecutado en cualquier simulador.
 ## Autores.
 
 - Óscar Vera López.
-- Adrián Ignacio del Río Ruiz
+- Adrián Ignacio del Río Ruiz.
