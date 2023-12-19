@@ -1,0 +1,12 @@
+Lexer error! On line 13, the numeric literal 2147483648 is out of range (-2^31, 2^31-1).
+Lexer error! On line 14, the numeric literal 2147483648 is out of range (-2^31, 2^31-1).
+Lexer error! On line 15, the numeric literal 2147483649 is out of range (-2^31, 2^31-1).
+Lexer error! On line 16, the numeric literal 4294967295 is out of range (-2^31, 2^31-1).
+Lexer error! On line 17, the numeric literal 4294967290 is out of range (-2^31, 2^31-1).
+Lexer error! On line 18, the numeric literal 9223372036854775807 is out of range (-2^31, 2^31-1).
+Lexer error! On line 19, the numeric literal 9223372036854775808 is out of range (-2^31, 2^31-1).
+Lexer error! On line 20, the numeric literal 18446744073709551615 is out of range (-2^31, 2^31-1).
+Lexer error! On line 21, the numeric literal 18446744073709551616 is out of range (-2^31, 2^31-1).
+Lexer error! On line 77, the identifier _identificador_demasiado_largo_1234567890 exceeds the maximum allowed length of 16 characters.
+Errores léxicos: 10
+Total de errores: 10

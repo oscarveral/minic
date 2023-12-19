@@ -1,0 +1,11 @@
+Lexer error! On line 1, the string ¿?¿?¿?¿?¿?¿?¿? could not be recognized.
+Lexer error! On line 3, the string $$$$$$$$$$$$$$ could not be recognized.
+Lexer error! On line 9, the string |||||||||||||| could not be recognized.
+Lexer error! On line 11, the string @@@@@@@@@@@@@@ could not be recognized.
+Lexer error! On line 32, the string ? could not be recognized.
+Lexer error! On line 32, the string ?$ could not be recognized.
+Lexer error! On line 32, the string ?$| could not be recognized.
+Lexer error! On line 33, the string @ could not be recognized.
+Lexer error! On line 33, the string . could not be recognized.
+Errores léxicos: 9
+Total de errores: 9

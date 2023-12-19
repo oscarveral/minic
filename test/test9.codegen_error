@@ -1,0 +1,7 @@
+Warning! On line 3, the symbol a is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 3, the symbol b is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 3, the symbol c is not initialized. Consider initializing it to avoid future bugs!
+Codegen error! On line 14, too much nested code to be handled by the compiler. Register exhaustion!
+Probably the code is too much nested. Try refactoring it.
+Errores de generación: 1
+Total de errores: 1

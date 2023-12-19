@@ -1,0 +1,123 @@
+VOID  ID(main)  LPARENTHESIS RPARENTHESIS  LBRACE 
+
+	LINE_COMMENT(// Declaraciones estandar de variables.) 
+
+	VAR  ID(a1) SEMICOLON 
+	VAR  ID(a2)  ASSIGN  NUM(2) SEMICOLON 
+	VAR  ID(b1) COMMA  ID(b2) COMMA  ID(b3) COMMA  ID(b4) SEMICOLON 
+	VAR  ID(c1)  ASSIGN  NUM(1) COMMA  ID(c2)  ASSIGN  NUM(2) COMMA  ID(c3)  ASSIGN  NUM(3) COMMA  ID(c4)  ASSIGN  NUM(4) SEMICOLON 
+	VAR  ID(d1)  ASSIGN  NUM(1) COMMA  ID(d2) COMMA  ID(d3)  ASSIGN  NUM(3) COMMA  ID(d4) SEMICOLON 
+
+	LINE_COMMENT(// Declaraciones estandar de constantes.) 
+
+	CONST  ID(e1) SEMICOLON 
+	CONST  ID(e2)  ASSIGN  NUM(2) SEMICOLON 
+	CONST  ID(f1) COMMA  ID(f2) COMMA  ID(f3) COMMA  ID(f4) SEMICOLON 
+	CONST  ID(g1)  ASSIGN  NUM(1) COMMA  ID(g2)  ASSIGN  NUM(2) COMMA  ID(g3)  ASSIGN  NUM(3) COMMA  ID(g4)  ASSIGN  NUM(4) SEMICOLON 
+	CONST  ID(h1)  ASSIGN  NUM(1) COMMA  ID(h2) COMMA  ID(h3)  ASSIGN  NUM(3) COMMA  ID(h4) SEMICOLON 
+
+	LINE_COMMENT(// Comporbación de dobles declaraciones.) 
+
+	VAR  ID(a) SEMICOLON 
+	VAR  ID(a) SEMICOLON 
+
+	VAR  ID(b) SEMICOLON 
+	CONST  ID(b) SEMICOLON 
+
+	CONST  ID(c) SEMICOLON 
+	CONST  ID(c) SEMICOLON 
+
+	CONST  ID(d) SEMICOLON 
+	VAR  ID(d) SEMICOLON 
+
+	LINE_COMMENT(// Comporbación de dobles inicializaciones.) 
+
+	VAR  ID(e)  ASSIGN  NUM(1) SEMICOLON 
+	VAR  ID(e)  ASSIGN  NUM(2) SEMICOLON 
+
+	VAR  ID(f)  ASSIGN  NUM(1) SEMICOLON 
+	CONST  ID(f)  ASSIGN  NUM(2) SEMICOLON 
+
+	CONST  ID(g)  ASSIGN  NUM(1) SEMICOLON 
+	CONST  ID(g)  ASSIGN  NUM(2) SEMICOLON 
+
+	CONST  ID(h)  ASSIGN  NUM(1) SEMICOLON 
+	VAR  ID(h)  ASSIGN  NUM(2) SEMICOLON 
+
+	LINE_COMMENT(// Comporbación de mezcla de declaraciones e inicializaciones dobles.) 
+
+	VAR  ID(i) SEMICOLON 
+	VAR  ID(i)  ASSIGN  NUM(1) SEMICOLON 
+	CONST  ID(i)  ASSIGN  NUM(2) SEMICOLON 
+
+	CONST  ID(j) SEMICOLON 
+	VAR  ID(j)  ASSIGN  NUM(1) SEMICOLON 
+	CONST  ID(j)  ASSIGN  NUM(2) SEMICOLON 
+
+	VAR  ID(k)  ASSIGN  NUM(1) SEMICOLON 
+	VAR  ID(k) SEMICOLON 
+	CONST  ID(k) SEMICOLON 
+
+	CONST  ID(l)  ASSIGN  NUM(1) SEMICOLON 
+	VAR  ID(l) SEMICOLON 
+	CONST  ID(l) SEMICOLON 
+
+	LINE_COMMENT(// Comprobación de asignación.) 
+
+	VAR  ID(variable)  ASSIGN  NUM(0) SEMICOLON 
+	CONST  ID(constante)  ASSIGN  NUM(0) SEMICOLON 
+
+	ID(variable)  ASSIGN  NUM(1)  PLUS  NUM(2) SEMICOLON 
+	ID(variable)  ASSIGN  ID(a)  PLUS  ID(b) SEMICOLON 
+
+	LINE_COMMENT(// Asignación a variable no declarada.) 
+
+	ID(inexistente)  ASSIGN  NUM(1)  PLUS  NUM(2) SEMICOLON 
+
+	LINE_COMMENT(// Asignación a constante.) 
+
+	ID(constante)  ASSIGN  NUM(1)  PLUS  NUM(2) SEMICOLON 
+
+	LINE_COMMENT(// Uso de símbolos inexistentes.) 
+
+	ID(variable)  ASSIGN  ID(variable)  PLUS  ID(inexistente) SEMICOLON 
+	ID(constante)  ASSIGN  ID(constante)  PLUS  ID(inexistente) SEMICOLON 
+
+	LINE_COMMENT(// Otros.) 
+
+	ID(variable)  ASSIGN  ID(a)  PLUS  ID(b)  MINUS  ID(c)  MULT  ID(d)  DIVIDE  ID(g)  LTE  MINUS ID(a)  PLUS  LOGICAL_NEG ID(b)  MINUS  LPARENTHESIS LOGICAL_NEG ID(inexistente) RPARENTHESIS SEMICOLON 
+
+	LINE_COMMENT(// Lectura de variables.) 
+	READ  ID(a) COMMA  ID(b) SEMICOLON 
+	
+	LINE_COMMENT(// Lectura de constantes.) 
+	READ  ID(c) COMMA  ID(d) SEMICOLON 
+
+	LINE_COMMENT(// Lectura de inexistentes.) 
+	READ  ID(inexistente) SEMICOLON 
+
+	LINE_COMMENT(// Impresión de variables y constantes.) 
+	PRINT  ID(a) COMMA  ID(b) COMMA  ID(c) COMMA  ID(d) SEMICOLON 
+
+	LINE_COMMENT(// Impresión de inexistentes.) 
+	PRINT  ID(a) COMMA  ID(b) COMMA  ID(c) COMMA  ID(inexistente) SEMICOLON 
+
+	LINE_COMMENT(// Impresión de cadenas de texto.) 
+	PRINT  STRING("Cadena1") COMMA  STRING("Cadena2") SEMICOLON 
+
+
+LINE_COMMENT(// Impresión de cadenas multilínea.) 
+
+PRINT  STRING("Cadena3") SEMICOLON 
+
+PRINT  STRING("Cadena33") SEMICOLON 
+
+	LINE_COMMENT(// Impresión mezclada.) 
+	PRINT  STRING("Primera parte: ") COMMA  ID(a) COMMA  ID(b) COMMA  STRING(". Segunda parte: ") COMMA  ID(c)  COMMA  ID(d) COMMA  STRING(". Tercera parte: ") COMMA  ID(inexistente) COMMA  STRING(".") SEMICOLON 
+
+	LINE_COMMENT(// Comprobación de que la duplicidad de cadenas de texto no duplica entradas en la tabla de símbolos.) 
+	PRINT  STRING("Cadena que no se debe duplicar.") SEMICOLON 
+	PRINT  STRING("Cadena que no se debe duplicar.") SEMICOLON 
+	PRINT  STRING("Cadena que no se debe duplicar 2.") COMMA  STRING("Cadena que no se debe duplicar 2.") SEMICOLON 
+
+RBRACE 

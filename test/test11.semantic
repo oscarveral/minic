@@ -1,0 +1,16 @@
+-----------------
+TABLA DE SIMBOLOS
+Cantidad de símbolos: 9
+Candidad de cadenas: 6
+-----------------
+Tipo - Etiqueta - Valor semántico - Inicializado
+CONSTANTE - _a - 0 - 1
+CONSTANTE - _b - 0 - 1
+VARIABLE - _c - 0 - 1
+CADENA - $str1 - "Inicio del programa\n" - 1
+CADENA - $str2 - "a" - 1
+CADENA - $str3 - "\n" - 1
+CADENA - $str4 - "No a y b\n" - 1
+CADENA - $str5 - "c = " - 1
+CADENA - $str6 - "Final" - 1
+-------------------

@@ -1,0 +1,82 @@
+-----------------
+TABLA DE SIMBOLOS
+Cantidad de símbolos: 75
+Candidad de cadenas: 56
+-----------------
+Tipo - Etiqueta - Valor semántico - Inicializado
+CONSTANTE - _true - 0 - 1
+CONSTANTE - _false - 0 - 1
+VARIABLE - _max - 0 - 0
+VARIABLE - _cuenta - 0 - 0
+VARIABLE - _check - 0 - 0
+VARIABLE - _comparado - 0 - 0
+VARIABLE - _comparador - 0 - 0
+VARIABLE - _res - 0 - 1
+VARIABLE - _a - 0 - 0
+VARIABLE - _b - 0 - 0
+VARIABLE - _c - 0 - 0
+VARIABLE - _if_num - 0 - 1
+VARIABLE - _while_num - 0 - 1
+VARIABLE - _n - 0 - 1
+VARIABLE - _res_while - 0 - 1
+VARIABLE - _contador - 0 - 0
+VARIABLE - _iteraciones - 0 - 0
+VARIABLE - _pasos - 0 - 0
+VARIABLE - _otra_variable - 0 - 0
+CADENA - $str1 - "Demostración de validez y composición de la precedencia de operaciones aritméticas\n" - 1
+CADENA - $str2 - "Introduce un valor: " - 1
+CADENA - $str3 - "La igualdad a continuación debe ser cierta: " - 1
+CADENA - $str4 - " = " - 1
+CADENA - $str5 - ".\n" - 1
+CADENA - $str6 - "\nDemostración de operadores relacionales y su composición.\nIntroduce un valor que comparar: " - 1
+CADENA - $str7 - "Introduce un valor con el que comparar: " - 1
+CADENA - $str8 - " == " - 1
+CADENA - $str9 - " -> " - 1
+CADENA - $str10 - "\n" - 1
+CADENA - $str11 - " != " - 1
+CADENA - $str12 - " <= " - 1
+CADENA - $str13 - " >= " - 1
+CADENA - $str14 - " <  " - 1
+CADENA - $str15 - " >  " - 1
+CADENA - $str16 - "\nDemostración de la negación lógica.\n" - 1
+CADENA - $str17 - "La constante true vale " - 1
+CADENA - $str18 - "La constante false vale " - 1
+CADENA - $str19 - "La expresion !true vale " - 1
+CADENA - $str20 - "La expresion !false vale " - 1
+CADENA - $str21 - "Cualquier número distinto de 0 se evalua a 0 y 0 se evalua a 1.\n" - 1
+CADENA - $str22 - "La variable comparador vale " - 1
+CADENA - $str23 - "La expresion !comparador vale " - 1
+CADENA - $str24 - "La expresion !!comparador vale " - 1
+CADENA - $str25 - "La variable comparado vale " - 1
+CADENA - $str26 - "La expresion !comparado vale " - 1
+CADENA - $str27 - "La expresion !!comparado vale " - 1
+CADENA - $str28 - "\nDemostración de la negación unaria.\n" - 1
+CADENA - $str29 - "La expresion -comparador vale " - 1
+CADENA - $str30 - "La expresion --comparador vale " - 1
+CADENA - $str31 - "La expresion -comparado vale " - 1
+CADENA - $str32 - "La expresion --comparado vale " - 1
+CADENA - $str33 - "\nDemostración de lectura múltiple.\n" - 1
+CADENA - $str34 - "Introduce 3 números:\n" - 1
+CADENA - $str35 - "a = " - 1
+CADENA - $str36 - ",\tb = " - 1
+CADENA - $str37 - ",\tc = " - 1
+CADENA - $str38 - "\nDemostración de la sentencia if.\n" - 1
+CADENA - $str39 - "Introduce un número, si es mayor que 0 se imprimirá su cuadrado, si es menor o igual que 0 se imprimirá su cubo: " - 1
+CADENA - $str40 - "El cuadrado de " - 1
+CADENA - $str41 - " es " - 1
+CADENA - $str42 - "El cubo de " - 1
+CADENA - $str43 - "\nDemostración de la sentencia if-else.\n" - 1
+CADENA - $str44 - "Introduce un número, si es 0 se imprimirá su negación, si es distinto de 0 se imprimirá su cubo: " - 1
+CADENA - $str45 - "La negación de " - 1
+CADENA - $str46 - "\nDemostración de la sentencia while.\n" - 1
+CADENA - $str47 - "Introduce un número para calcular la potencia enésima: " - 1
+CADENA - $str48 - "Introduce la potencia deseada: " - 1
+CADENA - $str49 - "No se permiten potencias negativas!\n" - 1
+CADENA - $str50 - "El resultado es: " - 1
+CADENA - $str51 - "\nDemostración de la sentencia do-while.\n" - 1
+CADENA - $str52 - "\nDemostración de la sentencia for normal.\n" - 1
+CADENA - $str53 - "Introduce la cantidad de iteraciones deseadas: " - 1
+CADENA - $str54 - "Iteración: " - 1
+CADENA - $str55 - "\nDemostración de la sentencia for extendida.\n" - 1
+CADENA - $str56 - "Introduce los pasos de incremento: " - 1
+-------------------

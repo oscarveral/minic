@@ -1,0 +1,77 @@
+MINUS NUM(0) 
+PLUS NUM(1) 
+MINUS NUM(2) 
+PLUS NUM(4) 
+MINUS NUM(8) 
+PLUS NUM(16) 
+MINUS NUM(32) 
+PLUS NUM(64) 
+MINUS NUM(128) 
+PLUS NUM(256) 
+MINUS NUM(1024) 
+PLUS NUM(2147483647) 
+PLUS BAD_NUM(0) 
+MINUS BAD_NUM(0) 
+PLUS BAD_NUM(0) 
+MINUS BAD_NUM(0) 
+PLUS BAD_NUM(0) 
+MINUS BAD_NUM(0) 
+PLUS BAD_NUM(0) 
+MINUS BAD_NUM(0) 
+PLUS BAD_NUM(0) 
+
+VOID 
+VAR 
+CONST 
+IF 
+ELSE 
+WHILE 
+PRINT 
+READ 
+FOR 
+DO 
+
+LTE 
+GTE 
+LT 
+GT 
+EQ 
+NEQ 
+
+LOGICAL_NEG 
+
+SEMICOLON 
+COMMA 
+PLUS 
+MINUS 
+MULT 
+DIVIDE 
+ASSIGN 
+LPARENTHESIS 
+RPARENTHESIS 
+LBRACE 
+RBRACE 
+
+LINE_COMMENT(// Esto es un comentario de una línea.) 
+MULTILINE_COMMENT(/* 
+   Este
+   es 
+   un
+   comentario 
+   multilínea 
+*/) 
+
+ID(Identificador) 
+ID(identificador) 
+ID(_identificador) 
+ID(_Identificador) 
+ID(id0123456789) 
+ID(_id0123456789) 
+ID(id_0123456789) 
+ID(ID_0123456789) 
+
+NUM(0) ID(identificador) 
+ID(_0identificador) 
+NUM(0) ID(_identificador) 
+
+BAD_ID(_identificador_demasiado_largo_1234567890) 

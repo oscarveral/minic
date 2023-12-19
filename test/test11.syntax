@@ -1,0 +1,61 @@
+λ ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+NUM ----> expression
+ID ASSIGN expression ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+NUM ----> expression
+expression PLUS expression ----> expression
+NUM ----> expression
+expression MINUS expression ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+λ ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+STRING ----> print_item
+print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+ID ----> expression
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+ID ----> expression
+λ ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+NUM ----> expression
+expression MINUS expression ----> expression
+NUM ----> expression
+expression PLUS expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+LBRACE statement_list RBRACE ----> statement
+WHILE LPARENTHESIS expression RPARENTHESIS statement ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ELSE statement ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ELSE statement ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+VOID ID LPARENTHESIS RPARENTHESIS LBRACE declarations statement_list RBRACE ----> programa

@@ -1,0 +1,12 @@
+Warning! On line 3, the symbol max is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 4, the symbol cuenta is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 4, the symbol check is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 6, the symbol comparado is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 6, the symbol comparador is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 11, the symbol a is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 11, the symbol b is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 11, the symbol c is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 16, the symbol contador is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 16, the symbol iteraciones is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 16, the symbol pasos is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 16, the symbol otra_variable is not initialized. Consider initializing it to avoid future bugs!

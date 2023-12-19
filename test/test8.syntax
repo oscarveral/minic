@@ -1,0 +1,927 @@
+λ ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+NUM ----> expression
+ID ASSIGN expression ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+NUM ----> expression
+ID ASSIGN expression ----> asig
+identifier_list COMMA asig ----> identifier_list
+NUM ----> expression
+ID ASSIGN expression ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+λ ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+ID ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+MINUS expression ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+MINUS expression ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+expression PLUS expression ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+ID ----> expression
+MINUS expression ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+ID ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+LOGICAL_NEG expression ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+expression PLUS expression ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+expression DIVIDE expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+ID ----> expression
+expression PLUS expression ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+ID ----> expression
+MINUS expression ----> expression
+expression DIVIDE expression ----> expression
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+expression PLUS expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+ID ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+expression EQ expression ----> expression
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+expression ----> print_item
+print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+MINUS expression ----> expression
+expression PLUS expression ----> expression
+ID ----> expression
+ID ----> expression
+MINUS expression ----> expression
+expression PLUS expression ----> expression
+expression NEQ expression ----> expression
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+MINUS expression ----> expression
+expression PLUS expression ----> expression
+expression ----> print_item
+print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+ID ----> expression
+MINUS expression ----> expression
+expression PLUS expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+expression PLUS expression ----> expression
+ID ----> expression
+ID ----> expression
+expression PLUS expression ----> expression
+expression LTE expression ----> expression
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+expression PLUS expression ----> expression
+expression ----> print_item
+print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+ID ----> expression
+expression PLUS expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+expression MINUS expression ----> expression
+ID ----> expression
+ID ----> expression
+expression MINUS expression ----> expression
+expression GTE expression ----> expression
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+expression MINUS expression ----> expression
+expression ----> print_item
+print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+ID ----> expression
+expression MINUS expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+expression LTE expression ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+ID ----> expression
+ID ----> expression
+expression LTE expression ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+expression LT expression ----> expression
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+expression LTE expression ----> expression
+expression ----> print_item
+print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+ID ----> expression
+expression LTE expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+expression GT expression ----> expression
+ID ----> expression
+expression GT expression ----> expression
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+expression GT expression ----> expression
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+expression GT expression ----> expression
+expression ----> print_item
+print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+expression GT expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+LOGICAL_NEG expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+LOGICAL_NEG expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+MINUS expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+MINUS expression ----> expression
+MINUS expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+MINUS expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+MINUS expression ----> expression
+MINUS expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+read_list COMMA ID ----> read_list
+read_list COMMA ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+NUM ----> expression
+expression GT expression ----> expression
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+NUM ----> expression
+expression LTE expression ----> expression
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ELSE statement ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+NUM ----> expression
+expression LT expression ----> expression
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+λ ----> statement_list
+ID ----> expression
+NUM ----> expression
+expression EQ expression ----> expression
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+λ ----> statement_list
+ID ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+NUM ----> expression
+expression GT expression ----> expression
+λ ----> statement_list
+ID ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+NUM ----> expression
+expression MINUS expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+LBRACE statement_list RBRACE ----> statement
+WHILE LPARENTHESIS expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+LBRACE statement_list RBRACE ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ELSE statement ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+LBRACE statement_list RBRACE ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ELSE statement ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+NUM ----> expression
+expression LT expression ----> expression
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+λ ----> statement_list
+ID ----> expression
+NUM ----> expression
+expression EQ expression ----> expression
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+λ ----> statement_list
+ID ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+λ ----> statement_list
+ID ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+NUM ----> expression
+expression MINUS expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+LBRACE statement_list RBRACE ----> statement
+ID ----> expression
+NUM ----> expression
+expression GT expression ----> expression
+DO statement WHILE LPARENTHESIS expression RPARENTHESIS ----> statement
+statement_list statement ----> statement_list
+LBRACE statement_list RBRACE ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ELSE statement ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+LBRACE statement_list RBRACE ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ELSE statement ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ----> expression
+ID ----> expression
+expression LT expression ----> expression
+λ ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+LBRACE statement_list RBRACE ----> statement
+FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ----> expression
+ID ----> expression
+expression LTE expression ----> expression
+λ ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+LBRACE statement_list RBRACE ----> statement
+FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ----> expression
+ID ----> expression
+expression LT expression ----> expression
+λ ----> statement_list
+ID ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+LBRACE statement_list RBRACE ----> statement
+FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ----> expression
+ID ----> expression
+expression LTE expression ----> expression
+ID ----> expression
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression SEMICOLON expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+ID ----> expression
+ID ----> expression
+expression LTE expression ----> expression
+NUM ----> expression
+ID ----> expression
+ID ----> expression
+NUM ----> expression
+expression DIVIDE expression ----> expression
+expression LTE expression ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+expression PLUS expression ----> expression
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression SEMICOLON expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+VOID ID LPARENTHESIS RPARENTHESIS LBRACE declarations statement_list RBRACE ----> programa

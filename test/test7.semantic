@@ -1,0 +1,59 @@
+-----------------
+TABLA DE SIMBOLOS
+Cantidad de símbolos: 52
+Candidad de cadenas: 10
+-----------------
+Tipo - Etiqueta - Valor semántico - Inicializado
+CONSTANTE - _e1 - 0 - 0
+CONSTANTE - _e2 - 0 - 1
+CONSTANTE - _f1 - 0 - 0
+CONSTANTE - _f2 - 0 - 0
+CONSTANTE - _f3 - 0 - 0
+CONSTANTE - _f4 - 0 - 0
+CONSTANTE - _g1 - 0 - 1
+CONSTANTE - _g2 - 0 - 1
+CONSTANTE - _g3 - 0 - 1
+CONSTANTE - _g4 - 0 - 1
+CONSTANTE - _h1 - 0 - 1
+CONSTANTE - _h2 - 0 - 0
+CONSTANTE - _h3 - 0 - 1
+CONSTANTE - _h4 - 0 - 0
+CONSTANTE - _c - 0 - 0
+CONSTANTE - _d - 0 - 0
+CONSTANTE - _g - 0 - 1
+CONSTANTE - _h - 0 - 1
+CONSTANTE - _j - 0 - 0
+CONSTANTE - _l - 0 - 1
+CONSTANTE - _constante - 0 - 1
+VARIABLE - _a1 - 0 - 0
+VARIABLE - _a2 - 0 - 1
+VARIABLE - _b1 - 0 - 0
+VARIABLE - _b2 - 0 - 0
+VARIABLE - _b3 - 0 - 0
+VARIABLE - _b4 - 0 - 0
+VARIABLE - _c1 - 0 - 1
+VARIABLE - _c2 - 0 - 1
+VARIABLE - _c3 - 0 - 1
+VARIABLE - _c4 - 0 - 1
+VARIABLE - _d1 - 0 - 1
+VARIABLE - _d2 - 0 - 0
+VARIABLE - _d3 - 0 - 1
+VARIABLE - _d4 - 0 - 0
+VARIABLE - _a - 0 - 0
+VARIABLE - _b - 0 - 0
+VARIABLE - _e - 0 - 1
+VARIABLE - _f - 0 - 1
+VARIABLE - _i - 0 - 0
+VARIABLE - _k - 0 - 1
+VARIABLE - _variable - 0 - 1
+CADENA - $str1 - "Cadena1" - 1
+CADENA - $str2 - "Cadena2" - 1
+CADENA - $str3 - "Cadena3" - 1
+CADENA - $str4 - "Cadena33" - 1
+CADENA - $str5 - "Primera parte: " - 1
+CADENA - $str6 - ". Segunda parte: " - 1
+CADENA - $str7 - ". Tercera parte: " - 1
+CADENA - $str8 - "." - 1
+CADENA - $str9 - "Cadena que no se debe duplicar." - 1
+CADENA - $str10 - "Cadena que no se debe duplicar 2." - 1
+-------------------

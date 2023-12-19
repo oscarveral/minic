@@ -1,0 +1,74 @@
+Warning! On line 3, the symbol a is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 4, the symbol b is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 6, the symbol c is not initialized. Consider initializing it to avoid future bugs!
+syntax error!
+On line 6, the declaration has an error.
+syntax error!
+On line 6, the declaration has an error.
+Warning! On line 6, the symbol f is not initialized. Consider initializing it to avoid future bugs!
+syntax error!
+On line 6, the declaration has an error.
+syntax error!
+On line 6, the declaration has an error.
+Warning! On line 6, the symbol g is not initialized. Consider initializing it to avoid future bugs!
+syntax error!
+On line 7, the declaration has an error.
+syntax error!
+On line 7, the declaration has an error.
+Warning! On line 7, the symbol p is not initialized. Consider initializing it to avoid future bugs!
+syntax error!
+On line 7, the declaration has an error.
+Warning! On line 7, the symbol q is not initialized. Consider initializing it to avoid future bugs!
+syntax error!
+On line 7, the declaration has an error.
+syntax error!
+On line 9, the declaration has an error.
+syntax error!
+On line 9, the declaration has an error.
+syntax error!
+On line 9, the declaration has an error.
+syntax error!
+On line 9, the declaration has an error.
+syntax error!
+On line 9, the declaration has an error.
+syntax error!
+On line 9, the declaration has an error.
+syntax error!
+On line 9, the declaration has an error.
+syntax error!
+On line 10, the declaration has an error.
+syntax error!
+On line 10, the declaration has an error.
+syntax error!
+On line 12, the read statement has a bad formated list of variables.
+syntax error!
+On line 12, the read statement has a bad formated list of variables.
+syntax error!
+On line 12, the read statement has a bad formated list of variables.
+syntax error!
+On line 12, the read statement has a bad formated list of variables.
+syntax error!
+On line 13, the read statement has a bad formated list of variables.
+syntax error!
+On line 13, the read statement has a bad formated list of variables.
+syntax error!
+On line 13, the read statement has a bad formated list of variables.
+syntax error!
+On line 13, the read statement has a bad formated list of variables.
+syntax error!
+On line 15, the print statement has a bad formated list of variables.
+syntax error!
+On line 15, the print statement has a bad formated list of variables.
+syntax error!
+On line 15, the print statement has a bad formated list of variables.
+syntax error!
+On line 16, the print statement has a bad formated list of variables.
+syntax error!
+On line 16, the print statement has a bad formated list of variables.
+syntax error!
+On line 16, the print statement has a bad formated list of variables.
+syntax error!
+On line 16, the print statement has a bad formated list of variables.
+syntax error!
+Errores sintácticos: 33
+Total de errores: 33

@@ -1,0 +1,54 @@
+λ ----> declarations
+ID ----> asig
+asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+λ ----> statement_list
+ID ----> expression
+ID ----> expression
+expression EQ expression ----> expression
+ID ----> expression
+ID ----> expression
+expression EQ expression ----> expression
+ID ----> expression
+ID ----> expression
+expression EQ expression ----> expression
+ID ----> expression
+ID ----> expression
+expression EQ expression ----> expression
+ID ----> expression
+ID ----> expression
+expression EQ expression ----> expression
+ID ----> expression
+ID ----> expression
+expression EQ expression ----> expression
+ID ----> expression
+ID ----> expression
+expression EQ expression ----> expression
+ID ----> expression
+ID ----> expression
+expression EQ expression ----> expression
+ID ----> expression
+ID ----> expression
+expression EQ expression ----> expression
+ID ----> expression
+ID ----> expression
+expression EQ expression ----> expression
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+IF LPARENTHESIS expression RPARENTHESIS statement ----> statement
+statement_list statement ----> statement_list
+VOID ID LPARENTHESIS RPARENTHESIS LBRACE declarations statement_list RBRACE ----> programa

@@ -1,0 +1,108 @@
+LINE_COMMENT(// Fichero de depuración de comentarios) 
+
+LINE_COMMENT(// Comentario con tokens: void var const if else while print read) 
+
+LINE_COMMENT(// Comentario con elementos: ;,+-*/=(){}) 
+
+LINE_COMMENT(// Otros: ñ¿?ºª¡!'`+[]123456789) 
+
+LINE_COMMENT(// Comentario // anidado // en // otros // comentarios.) 
+
+LINE_COMMENT(// Comentario anidado con /* comentario multilínea */) 
+
+LINE_COMMENT(// Comentario anidado con  /* comentario multilínea acabado en ) 
+    ID(la)  
+    ID(l) UNRECOGNIZED(í) ID(nea)  
+    ID(siguiente) 
+MULT DIVIDE 
+
+LINE_COMMENT(// En los comentarios se ignoran los identificadores: id_01 _ID_23 _id_45 ID_67 ) 
+
+MULTILINE_COMMENT(/* Comentario multilínea en una sóla línea. */) 
+
+MULTILINE_COMMENT(/*  
+    Comentario
+    multilínea
+    normal
+    y
+    corriente.
+*/) 
+
+MULTILINE_COMMENT(/** Comentario 
+ *  del tipo
+ *  de documentación.
+ */) 
+
+MULTILINE_COMMENT(/* 
+    Comentario con tokens: 
+    void 
+    var 
+    const 
+    if 
+    else 
+    while 
+    print 
+    read
+*/) 
+
+MULTILINE_COMMENT(/* 
+    Comentario con elementos: 
+    ;
+    ,
+    +
+    -
+    *
+    /
+    =
+    ()
+    {}
+*/) 
+
+MULTILINE_COMMENT(/* 
+    Otros: 
+    ñ
+    ¿
+    ?
+    º
+    ª
+    ¡
+    !
+    '
+    `
+    +
+    []
+    123456789
+*/) 
+
+MULTILINE_COMMENT(/* 
+    Comentario
+    multilínea
+    con // comentario de una línea anidado.
+*/) 
+
+MULTILINE_COMMENT(/* Comentario multilínea con // comentario de una línea anidado. */) 
+
+MULTILINE_COMMENT(/*
+    En los comentarios multilínea se ignoran los identificadores: 
+    id_01 
+    _ID_23 
+    _id_45 
+    ID_67 
+*/) 
+
+ID(Comentario)  ID(multil) UNRECOGNIZED(í) ID(nea)  ID(sin)  ID(abrir) UNRECOGNIZED(.)  MULT DIVIDE 
+
+LINE_COMMENT(// Comentario con "cadena de texto anidada") 
+
+MULTILINE_COMMENT(/* Comentario multilinea con "cadena de texto anidada" */) 
+
+MULTILINE_COMMENT(/* 
+Comentario multilinea con 
+"cadena \
+de\
+texto\
+multilinea\
+anidada".
+*/) 
+
+PARTIAL_COMMENT(/* Esto es un comentario multilínea sin cerrar...) 

@@ -1,0 +1,5 @@
+Lexer error! On line 43, there is a string badly formatted.
+Lexer error! On line 63, there is a string badly formatted.
+Lexer error! On line 85 the string is not closed.
+Errores léxicos: 3
+Total de errores: 3

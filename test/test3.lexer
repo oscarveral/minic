@@ -1,0 +1,27 @@
+STRING("Cadena de texto normal") 
+
+STRING("Cadena de texto con carácteres de escape: \n\"\n\\\t ") 
+
+STRING("Cadena con palabras clave: void var const if else while print read ; / * - + () {} id_0123456789 /* */ ") 
+
+STRING("Cadena de texto normal dividida en multiples líneas") 
+
+STRING("Cadena de texto normal dividida en multiples líneas con caracteres de escape: \t\n\t") 
+
+BAD_STRING("If you see this, it means there was a badly formatted string on the input.") 
+
+STRING("Cadena con // comentario anidado. ") 
+
+STRING("Cadena con /* comentario multilínea */ anidado.") 
+
+STRING("Cadena multilínea con /* comentario multilínea */ anidado") 
+
+BAD_STRING("If you see this, it means there was a badly formatted string on the input.") 
+
+STRING("Cadena de texto normal dividida en multiples líneas con caracteres de escape: \t\n\t") 
+
+STRING("Cadena de texto con carácteres de escape: \n") 
+
+STRING("\n") 
+
+PARTIAL_STRING("Cadena sin cerrar) 

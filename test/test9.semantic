@@ -1,0 +1,11 @@
+-----------------
+TABLA DE SIMBOLOS
+Cantidad de símbolos: 4
+Candidad de cadenas: 1
+-----------------
+Tipo - Etiqueta - Valor semántico - Inicializado
+VARIABLE - _a - 0 - 0
+VARIABLE - _b - 0 - 0
+VARIABLE - _c - 0 - 0
+CADENA - $str1 - "Register exhaustion!" - 1
+-------------------

@@ -1,0 +1,189 @@
+VOID  ID(main) LPARENTHESIS RPARENTHESIS  
+LBRACE 
+	VAR  ID(max) SEMICOLON 
+	VAR  ID(cuenta) COMMA  ID(check) SEMICOLON 
+
+	VAR  ID(comparado) COMMA  ID(comparador) SEMICOLON 
+	VAR  ID(res)  ASSIGN  NUM(0) SEMICOLON 
+
+	CONST  ID(true)  ASSIGN  NUM(1) COMMA  ID(false)  ASSIGN  NUM(0) SEMICOLON 
+
+	VAR  ID(a) COMMA ID(b) COMMA ID(c) SEMICOLON 
+
+	VAR  ID(if_num)  ASSIGN  NUM(0) SEMICOLON 
+	VAR  ID(while_num)  ASSIGN  NUM(0) COMMA  ID(n)  ASSIGN  NUM(0) COMMA  ID(res_while)  ASSIGN  NUM(1) SEMICOLON 
+
+	VAR  ID(contador) COMMA  ID(iteraciones) COMMA  ID(pasos) COMMA  ID(otra_variable) SEMICOLON 
+
+	PRINT  STRING("Demostración de validez y composición de la precedencia de operaciones aritméticas\n") SEMICOLON 
+
+	PRINT  STRING("Introduce un valor: ") SEMICOLON 
+	READ  ID(max) SEMICOLON 
+
+	ID(check)  ASSIGN  LPARENTHESIS LPARENTHESIS LOGICAL_NEG ID(max) RPARENTHESIS  PLUS  LPARENTHESIS MINUS LPARENTHESIS MINUS LPARENTHESIS ID(max) RPARENTHESIS RPARENTHESIS RPARENTHESIS RPARENTHESIS MULT ID(max) DIVIDE LPARENTHESIS LPARENTHESIS MINUS ID(max) RPARENTHESIS PLUS LPARENTHESIS LOGICAL_NEG LPARENTHESIS ID(max) RPARENTHESIS RPARENTHESIS RPARENTHESIS SEMICOLON 
+	ID(cuenta)  ASSIGN  LPARENTHESIS LOGICAL_NEG ID(max)  PLUS  ID(max) RPARENTHESIS MULT ID(max) DIVIDE MINUS ID(max) PLUS LOGICAL_NEG ID(max) SEMICOLON 
+
+	PRINT  STRING("La igualdad a continuación debe ser cierta: ") COMMA  ID(check) COMMA  STRING(" = ") COMMA  ID(cuenta) COMMA STRING(".\n") SEMICOLON 
+
+	PRINT  STRING("\nDemostración de operadores relacionales y su composición.\nIntroduce un valor que comparar: ") SEMICOLON 
+	READ  ID(comparado) SEMICOLON 
+	PRINT  STRING("Introduce un valor con el que comparar: ") SEMICOLON 
+	READ  ID(comparador) SEMICOLON 
+
+	IF  LPARENTHESIS ID(comparado) MULT ID(comparado)  EQ  ID(comparador) MULT ID(comparador) RPARENTHESIS  ID(res)  ASSIGN  NUM(1) SEMICOLON 
+	PRINT  ID(comparado) MULT ID(comparado) COMMA  STRING(" == ") COMMA  ID(comparador) MULT ID(comparador) COMMA  STRING(" -> ") COMMA  ID(res) COMMA  STRING("\n") SEMICOLON 
+	ID(res)  ASSIGN  NUM(0) SEMICOLON 
+	IF  LPARENTHESIS ID(comparado)  PLUS MINUS  ID(comparado)  NEQ  ID(comparador)  PLUS MINUS  ID(comparador) RPARENTHESIS  ID(res)  ASSIGN  NUM(1) SEMICOLON 
+	PRINT  ID(comparado)  PLUS MINUS  ID(comparado) COMMA  STRING(" != ") COMMA  ID(comparador)  PLUS MINUS  ID(comparador) COMMA  STRING(" -> ") COMMA  ID(res) COMMA  STRING("\n") SEMICOLON 
+	ID(res)  ASSIGN  NUM(0) SEMICOLON 
+	IF  LPARENTHESIS ID(comparado) PLUS ID(comparado)  LTE  ID(comparador) PLUS ID(comparador) RPARENTHESIS  ID(res)  ASSIGN  NUM(1) SEMICOLON 
+	PRINT  ID(comparado) PLUS ID(comparado) COMMA  STRING(" <= ") COMMA  ID(comparador) PLUS ID(comparador) COMMA  STRING(" -> ") COMMA  ID(res) COMMA  STRING("\n") SEMICOLON 
+	ID(res)  ASSIGN  NUM(0) SEMICOLON 
+	IF  LPARENTHESIS ID(comparado) MINUS ID(comparado)  GTE  ID(comparador) MINUS ID(comparador) RPARENTHESIS  ID(res)  ASSIGN  NUM(1) SEMICOLON 
+	PRINT  ID(comparado) MINUS ID(comparado) COMMA  STRING(" >= ") COMMA  ID(comparador) MINUS ID(comparador) COMMA  STRING(" -> ") COMMA  ID(res) COMMA  STRING("\n") SEMICOLON 
+	ID(res)  ASSIGN  NUM(0) SEMICOLON 
+	IF  LPARENTHESIS LPARENTHESIS ID(comparado) LTE ID(comparado) RPARENTHESIS  LT  LPARENTHESIS ID(comparador) LTE ID(comparador) RPARENTHESIS RPARENTHESIS  ID(res)  ASSIGN  NUM(1) SEMICOLON 
+	PRINT  ID(comparado) LTE ID(comparado) COMMA  STRING(" <  ") COMMA  ID(comparador) LTE ID(comparador) COMMA  STRING(" -> ") COMMA  ID(res) COMMA  STRING("\n") SEMICOLON 
+	ID(res)  ASSIGN  NUM(0) SEMICOLON 
+	IF  LPARENTHESIS ID(comparado) GT LOGICAL_NEG ID(comparado)  GT  ID(comparador) GT LOGICAL_NEG ID(comparador) RPARENTHESIS  ID(res)  ASSIGN  NUM(1) SEMICOLON 
+	PRINT  ID(comparado) GT LOGICAL_NEG ID(comparado) COMMA  STRING(" >  ") COMMA  ID(comparador) GT LOGICAL_NEG ID(comparador) COMMA  STRING(" -> ") COMMA  ID(res) COMMA  STRING("\n") SEMICOLON 
+	ID(res)  ASSIGN  NUM(0) SEMICOLON 
+
+	PRINT  STRING("\nDemostración de la negación lógica.\n") SEMICOLON 
+	PRINT  STRING("La constante true vale ") COMMA ID(true) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La constante false vale ") COMMA ID(false) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La expresion !true vale ") COMMA LOGICAL_NEG ID(true) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La expresion !false vale ") COMMA LOGICAL_NEG ID(false) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("Cualquier número distinto de 0 se evalua a 0 y 0 se evalua a 1.\n") SEMICOLON 
+	PRINT  STRING("La variable comparador vale ") COMMA  ID(comparador) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La expresion !comparador vale ") COMMA  LOGICAL_NEG ID(comparador) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La expresion !!comparador vale ") COMMA  LOGICAL_NEG LOGICAL_NEG ID(comparador) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La variable comparado vale ") COMMA  ID(comparado) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La expresion !comparado vale ") COMMA  LOGICAL_NEG ID(comparado) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La expresion !!comparado vale ") COMMA  LOGICAL_NEG LOGICAL_NEG ID(comparado) COMMA  STRING("\n") SEMICOLON 
+
+	PRINT  STRING("\nDemostración de la negación unaria.\n") SEMICOLON 
+	PRINT  STRING("La variable comparador vale ") COMMA  ID(comparador) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La expresion -comparador vale ") COMMA  MINUS ID(comparador) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La expresion --comparador vale ") COMMA  MINUS MINUS ID(comparador) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La variable comparado vale ") COMMA  ID(comparado) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La expresion -comparado vale ") COMMA  MINUS ID(comparado) COMMA  STRING("\n") SEMICOLON 
+	PRINT  STRING("La expresion --comparado vale ") COMMA  MINUS MINUS ID(comparado) COMMA  STRING("\n") SEMICOLON 
+
+	PRINT  STRING("\nDemostración de lectura múltiple.\n") SEMICOLON 
+	PRINT  STRING("Introduce 3 números:\n") SEMICOLON 
+	READ  ID(a) COMMA ID(b) COMMA ID(c) SEMICOLON 
+	PRINT  STRING("a = ") COMMA ID(a) COMMA STRING(",\tb = ") COMMA ID(b) COMMA STRING(",\tc = ") COMMA ID(c) COMMA STRING(".\n") SEMICOLON 
+
+
+	PRINT  STRING("\nDemostración de la sentencia if.\n") SEMICOLON 
+	PRINT  STRING("Introduce un número, si es mayor que 0 se imprimirá su cuadrado, si es menor o igual que 0 se imprimirá su cubo: ") SEMICOLON 
+	READ  ID(if_num) SEMICOLON 
+
+	IF  LPARENTHESIS ID(if_num)  GT  NUM(0) RPARENTHESIS 
+		PRINT  STRING("El cuadrado de ") COMMA  ID(if_num) COMMA  STRING(" es ") COMMA  ID(if_num) MULT ID(if_num) COMMA  STRING(".\n") SEMICOLON 
+	IF  LPARENTHESIS ID(if_num)  LTE  NUM(0) RPARENTHESIS 
+		PRINT  STRING("El cubo de ") COMMA  ID(if_num) COMMA  STRING(" es ") COMMA  ID(if_num) MULT ID(if_num) MULT ID(if_num) COMMA  STRING(".\n") SEMICOLON 
+	
+	PRINT  STRING("\nDemostración de la sentencia if-else.\n") SEMICOLON 
+	PRINT  STRING("Introduce un número, si es 0 se imprimirá su negación, si es distinto de 0 se imprimirá su cubo: ") SEMICOLON 
+	READ  ID(if_num) SEMICOLON 
+
+	IF  LPARENTHESIS LOGICAL_NEG ID(if_num) RPARENTHESIS 
+		PRINT  STRING("La negación de ") COMMA  ID(if_num) COMMA  STRING(" es ") COMMA  LOGICAL_NEG ID(if_num) COMMA  STRING(".\n") SEMICOLON 
+	ELSE 
+		PRINT  STRING("El cubo de ") COMMA  ID(if_num) COMMA  STRING(" es ") COMMA  ID(if_num) MULT ID(if_num) MULT ID(if_num) COMMA  STRING(".\n") SEMICOLON 
+	
+	PRINT  STRING("\nDemostración de la sentencia while.\n") SEMICOLON 
+	PRINT  STRING("Introduce un número para calcular la potencia enésima: ") SEMICOLON 
+	READ  ID(while_num) SEMICOLON 
+	PRINT  STRING("Introduce la potencia deseada: ") SEMICOLON 
+	READ  ID(n) SEMICOLON 
+
+	IF  LPARENTHESIS ID(n)  LT  NUM(0) RPARENTHESIS 
+		PRINT  STRING("No se permiten potencias negativas!\n") SEMICOLON 
+	ELSE 
+	LBRACE 
+		IF  LPARENTHESIS ID(n)  EQ  NUM(0) RPARENTHESIS 
+			ID(res_while)  ASSIGN  NUM(1) SEMICOLON 
+		ELSE 
+		LBRACE 
+			ID(cuenta)  ASSIGN  ID(n) SEMICOLON 
+
+			WHILE  LPARENTHESIS ID(cuenta)  GT  NUM(0) RPARENTHESIS 
+			LBRACE 	
+				ID(res_while)  ASSIGN  ID(while_num)  MULT  ID(res_while) SEMICOLON 
+				ID(cuenta)  ASSIGN  ID(cuenta)  MINUS  NUM(1) SEMICOLON 
+			RBRACE 
+		RBRACE 
+
+		PRINT  STRING("El resultado es: ") COMMA  ID(res_while) COMMA  STRING(".\n") SEMICOLON 
+	RBRACE 
+
+	PRINT  STRING("\nDemostración de la sentencia do-while.\n") SEMICOLON 
+	PRINT  STRING("Introduce un número para calcular la potencia enésima: ") SEMICOLON 
+	READ  ID(while_num) SEMICOLON 
+	PRINT  STRING("Introduce la potencia deseada: ") SEMICOLON 
+	READ  ID(n) SEMICOLON 
+
+	ID(res_while)  ASSIGN  NUM(1) SEMICOLON 
+	IF  LPARENTHESIS ID(n)  LT  NUM(0) RPARENTHESIS 
+		PRINT  STRING("No se permiten potencias negativas!\n") SEMICOLON 
+	ELSE 
+	LBRACE 
+		IF  LPARENTHESIS ID(n)  EQ  NUM(0) RPARENTHESIS 
+			ID(res_while)  ASSIGN  NUM(1) SEMICOLON 
+		ELSE 
+		LBRACE 
+			ID(cuenta)  ASSIGN  ID(n) SEMICOLON 
+
+			DO 
+			LBRACE 	
+				ID(res_while)  ASSIGN  ID(while_num)  MULT  ID(res_while) SEMICOLON 
+				ID(cuenta)  ASSIGN  ID(cuenta)  MINUS  NUM(1) SEMICOLON 
+			RBRACE 
+			WHILE  LPARENTHESIS ID(cuenta)  GT  NUM(0) RPARENTHESIS 
+		RBRACE 
+
+		PRINT  STRING("El resultado es: ") COMMA  ID(res_while) COMMA  STRING(".\n") SEMICOLON 
+	RBRACE 
+
+	PRINT  STRING("\nDemostración de la sentencia for normal.\n") SEMICOLON 
+	PRINT  STRING("Introduce la cantidad de iteraciones deseadas: ") SEMICOLON 
+	READ  ID(iteraciones) SEMICOLON 
+
+	FOR  LPARENTHESIS ID(contador)  ASSIGN  NUM(0) SEMICOLON  ID(contador)  LT  ID(iteraciones) RPARENTHESIS 
+	LBRACE 
+		PRINT  STRING("Iteración: ") COMMA  ID(contador) COMMA STRING(".\n") SEMICOLON 
+	RBRACE 
+
+	PRINT  STRING("\n") SEMICOLON 
+	FOR  LPARENTHESIS ID(contador)  ASSIGN  NUM(1) SEMICOLON  ID(contador)  LTE  ID(iteraciones) RPARENTHESIS 
+	LBRACE 
+		PRINT  STRING("Iteración: ") COMMA  ID(contador) COMMA  STRING(".\n") SEMICOLON 
+	RBRACE 
+
+	LINE_COMMENT(// Véase que las condiciones de finalización tamnbién admiten expresiones que no usan la variable de iteración.) 
+	PRINT  STRING("\n") SEMICOLON 
+	ID(otra_variable)  ASSIGN  NUM(1) SEMICOLON 
+	FOR  LPARENTHESIS ID(contador)  ASSIGN  NUM(1) SEMICOLON  ID(otra_variable)  LT  ID(iteraciones) RPARENTHESIS 
+	LBRACE 
+		ID(otra_variable)  ASSIGN  ID(contador) SEMICOLON 
+		PRINT  STRING("Iteración: ") COMMA  ID(otra_variable) COMMA  STRING(".\n") SEMICOLON 
+
+	RBRACE 
+
+	PRINT  STRING("\nDemostración de la sentencia for extendida.\n") SEMICOLON 
+	PRINT  STRING("Introduce la cantidad de iteraciones deseadas: ") SEMICOLON 
+	READ  ID(iteraciones) SEMICOLON 
+	PRINT  STRING("Introduce los pasos de incremento: ") SEMICOLON 
+	READ  ID(pasos) SEMICOLON 
+
+	FOR  LPARENTHESIS ID(contador)  ASSIGN  NUM(1) SEMICOLON  ID(contador)  LTE  ID(iteraciones) SEMICOLON  ID(pasos) RPARENTHESIS 
+		PRINT  STRING("Iteración: ") COMMA  ID(contador) COMMA  STRING(".\n") SEMICOLON 
+
+	LINE_COMMENT(// Los pasos de incremento admiten cualquier tipo de expresion del lenguaje.) 
+	PRINT  STRING("\n") SEMICOLON 
+	FOR  LPARENTHESIS ID(contador)  ASSIGN  NUM(1) SEMICOLON  ID(contador)  LTE  ID(iteraciones) SEMICOLON  NUM(1)  PLUS  LPARENTHESIS ID(contador)  LTE  ID(iteraciones) DIVIDE NUM(2) RPARENTHESIS RPARENTHESIS 
+		PRINT  STRING("Iteración: ") COMMA  ID(contador) COMMA  STRING(".\n") SEMICOLON 
+RBRACE 

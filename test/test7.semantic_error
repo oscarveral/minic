@@ -1,0 +1,49 @@
+Warning! On line 5, the symbol a1 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 7, the symbol b1 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 7, the symbol b2 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 7, the symbol b3 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 7, the symbol b4 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 9, the symbol d2 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 9, the symbol d4 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 13, the symbol e1 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 15, the symbol f1 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 15, the symbol f2 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 15, the symbol f3 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 15, the symbol f4 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 17, the symbol h2 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 17, the symbol h4 is not initialized. Consider initializing it to avoid future bugs!
+Warning! On line 21, the symbol a is not initialized. Consider initializing it to avoid future bugs!
+Semantic error! On line 22, the symbol a was already declared before.
+Warning! On line 24, the symbol b is not initialized. Consider initializing it to avoid future bugs!
+Semantic error! On line 25, the symbol b was already declared before.
+Warning! On line 27, the symbol c is not initialized. Consider initializing it to avoid future bugs!
+Semantic error! On line 28, the symbol c was already declared before.
+Warning! On line 30, the symbol d is not initialized. Consider initializing it to avoid future bugs!
+Semantic error! On line 31, the symbol d was already declared before.
+Semantic error! On line 36, the symbol e was already declared before.
+Semantic error! On line 39, the symbol f was already declared before.
+Semantic error! On line 42, the symbol g was already declared before.
+Semantic error! On line 45, the symbol h was already declared before.
+Warning! On line 49, the symbol i is not initialized. Consider initializing it to avoid future bugs!
+Semantic error! On line 50, the symbol i was already declared before.
+Semantic error! On line 51, the symbol i was already declared before.
+Warning! On line 53, the symbol j is not initialized. Consider initializing it to avoid future bugs!
+Semantic error! On line 54, the symbol j was already declared before.
+Semantic error! On line 55, the symbol j was already declared before.
+Semantic error! On line 58, the symbol k was already declared before.
+Semantic error! On line 59, the symbol k was already declared before.
+Semantic error! On line 62, the symbol l was already declared before.
+Semantic error! On line 63, the symbol l was already declared before.
+Semantic error! On line 75, the symbol inexistente was not declared before.
+Semantic error! On line 79, you are trying to assign a value to the constant symbol: constante.
+Semantic error! On line 83, the symbol inexistente was not declared before.
+Semantic error! On line 84, you are trying to assign a value to the constant symbol: constante.
+Semantic error! On line 84, the symbol inexistente was not declared before.
+Semantic error! On line 88, the symbol inexistente was not declared before.
+Semantic error! On line 94, you are trying to assign a value to the constant symbol: c.
+Semantic error! On line 94, you are trying to assign a value to the constant symbol: d.
+Semantic error! On line 97, the symbol inexistente was not declared before.
+Semantic error! On line 103, the symbol inexistente was not declared before.
+Semantic error! On line 119, the symbol inexistente was not declared before.
+Errores semánticos: 27
+Total de errores: 27

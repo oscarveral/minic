@@ -1,0 +1,1662 @@
+Terminals unused in grammar
+
+    WHITESPACE
+    LINE_COMMENT
+    MULTILINE_COMMENT
+    BAD_NUM
+    BAD_ID
+    BAD_STRING
+    PARTIAL_STRING
+    PARTIAL_COMMENT
+    UNRECOGNIZED
+
+
+State 101 conflicts: 1 shift/reduce
+
+
+Grammar
+
+    0 $accept: programa $end
+
+    1 $@1: ε
+
+    2 $@2: ε
+
+    3 programa: $@1 VOID ID $@2 LPARENTHESIS RPARENTHESIS LBRACE declarations statement_list RBRACE
+
+    4 declarations: ε
+
+    5 $@3: ε
+
+    6 declarations: declarations VAR $@3 identifier_list SEMICOLON
+
+    7 $@4: ε
+
+    8 declarations: declarations CONST $@4 identifier_list SEMICOLON
+
+    9 identifier_list: asig
+   10                | identifier_list COMMA asig
+   11                | identifier_list COMMA error
+   12                | error
+
+   13 asig: ID
+
+   14 $@5: ε
+
+   15 asig: ID $@5 ASSIGN expression
+
+   16 statement_list: ε
+   17               | statement_list statement
+
+   18 $@6: ε
+
+   19 statement: ID $@6 ASSIGN expression SEMICOLON
+   20          | LBRACE statement_list RBRACE
+   21          | IF LPARENTHESIS expression RPARENTHESIS statement ELSE statement
+   22          | IF LPARENTHESIS expression RPARENTHESIS statement
+   23          | WHILE LPARENTHESIS expression RPARENTHESIS statement
+   24          | DO statement WHILE LPARENTHESIS expression RPARENTHESIS
+   25          | FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression SEMICOLON expression RPARENTHESIS statement
+   26          | FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression RPARENTHESIS statement
+   27          | PRINT print_list SEMICOLON
+   28          | READ read_list SEMICOLON
+
+   29 print_list: print_item
+   30           | print_list COMMA print_item
+   31           | print_list COMMA error
+   32           | error
+
+   33 print_item: expression
+   34           | STRING
+
+   35 read_list: ID
+   36          | read_list COMMA ID
+   37          | read_list COMMA error
+   38          | error
+
+   39 expression: expression LTE expression
+   40           | expression GTE expression
+   41           | expression LT expression
+   42           | expression GT expression
+   43           | expression EQ expression
+   44           | expression NEQ expression
+   45           | expression PLUS expression
+   46           | expression MINUS expression
+   47           | expression MULT expression
+   48           | expression DIVIDE expression
+   49           | MINUS expression
+   50           | LOGICAL_NEG expression
+   51           | LPARENTHESIS expression RPARENTHESIS
+   52           | NUM
+   53           | ID
+
+
+Terminals, with rules where they appear
+
+    $end (0) 0
+    error (256) 11 12 31 32 37 38
+    WHITESPACE (258)
+    LINE_COMMENT (259)
+    MULTILINE_COMMENT (260)
+    VOID (261) 3
+    VAR (262) 6
+    CONST (263) 8
+    IF (264) 21 22
+    ELSE (265) 21
+    WHILE (266) 23 24
+    PRINT (267) 27
+    READ (268) 28
+    DO (269) 24
+    FOR (270) 25 26
+    SEMICOLON (271) 6 8 19 25 26 27 28
+    COMMA (272) 10 11 30 31 36 37
+    ASSIGN (273) 15 19 25 26
+    LPARENTHESIS (274) 3 21 22 23 24 25 26 51
+    RPARENTHESIS (275) 3 21 22 23 24 25 26 51
+    LBRACE (276) 3 20
+    RBRACE (277) 3 20
+    BAD_NUM (278)
+    BAD_ID (279)
+    BAD_STRING (280)
+    PARTIAL_STRING (281)
+    PARTIAL_COMMENT (282)
+    UNRECOGNIZED (283)
+    NUM <lexema> (284) 52
+    STRING <lexema> (285) 34
+    ID <lexema> (286) 3 13 15 19 25 26 35 36 53
+    LTE (287) 39
+    GTE (288) 40
+    LT (289) 41
+    GT (290) 42
+    EQ (291) 43
+    NEQ (292) 44
+    PLUS (293) 45
+    MINUS (294) 46 49
+    MULT (295) 47
+    DIVIDE (296) 48
+    UMINUS (297)
+    LOGICAL_NEG (298) 50
+
+
+Nonterminals, with rules where they appear
+
+    $accept (44)
+        on left: 0
+    programa (45)
+        on left: 3
+        on right: 0
+    $@1 (46)
+        on left: 1
+        on right: 3
+    $@2 (47)
+        on left: 2
+        on right: 3
+    declarations <codigo> (48)
+        on left: 4 6 8
+        on right: 3 6 8
+    $@3 (49)
+        on left: 5
+        on right: 6
+    $@4 (50)
+        on left: 7
+        on right: 8
+    identifier_list <codigo> (51)
+        on left: 9 10 11 12
+        on right: 6 8 10 11
+    asig <codigo> (52)
+        on left: 13 15
+        on right: 9 10
+    $@5 (53)
+        on left: 14
+        on right: 15
+    statement_list <codigo> (54)
+        on left: 16 17
+        on right: 3 17 20
+    statement <codigo> (55)
+        on left: 19 20 21 22 23 24 25 26 27 28
+        on right: 17 21 22 23 24 25 26
+    $@6 (56)
+        on left: 18
+        on right: 19
+    print_list <codigo> (57)
+        on left: 29 30 31 32
+        on right: 27 30 31
+    print_item <codigo> (58)
+        on left: 33 34
+        on right: 29 30
+    read_list <codigo> (59)
+        on left: 35 36 37 38
+        on right: 28 36 37
+    expression <codigo> (60)
+        on left: 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53
+        on right: 15 19 21 22 23 24 25 26 33 39 40 41 42 43 44 45 46 47 48 49 50 51
+
+
+State 0
+
+    0 $accept: • programa $end
+
+    $default  reduce using rule 1 ($@1)
+
+    programa  go to state 1
+    $@1       go to state 2
+
+
+State 1
+
+    0 $accept: programa • $end
+
+    $end  shift, and go to state 3
+
+
+State 2
+
+    3 programa: $@1 • VOID ID $@2 LPARENTHESIS RPARENTHESIS LBRACE declarations statement_list RBRACE
+
+    VOID  shift, and go to state 4
+
+
+State 3
+
+    0 $accept: programa $end •
+
+    $default  accept
+
+
+State 4
+
+    3 programa: $@1 VOID • ID $@2 LPARENTHESIS RPARENTHESIS LBRACE declarations statement_list RBRACE
+
+    ID  shift, and go to state 5
+
+
+State 5
+
+    3 programa: $@1 VOID ID • $@2 LPARENTHESIS RPARENTHESIS LBRACE declarations statement_list RBRACE
+
+    $default  reduce using rule 2 ($@2)
+
+    $@2  go to state 6
+
+
+State 6
+
+    3 programa: $@1 VOID ID $@2 • LPARENTHESIS RPARENTHESIS LBRACE declarations statement_list RBRACE
+
+    LPARENTHESIS  shift, and go to state 7
+
+
+State 7
+
+    3 programa: $@1 VOID ID $@2 LPARENTHESIS • RPARENTHESIS LBRACE declarations statement_list RBRACE
+
+    RPARENTHESIS  shift, and go to state 8
+
+
+State 8
+
+    3 programa: $@1 VOID ID $@2 LPARENTHESIS RPARENTHESIS • LBRACE declarations statement_list RBRACE
+
+    LBRACE  shift, and go to state 9
+
+
+State 9
+
+    3 programa: $@1 VOID ID $@2 LPARENTHESIS RPARENTHESIS LBRACE • declarations statement_list RBRACE
+
+    $default  reduce using rule 4 (declarations)
+
+    declarations  go to state 10
+
+
+State 10
+
+    3 programa: $@1 VOID ID $@2 LPARENTHESIS RPARENTHESIS LBRACE declarations • statement_list RBRACE
+    6 declarations: declarations • VAR $@3 identifier_list SEMICOLON
+    8             | declarations • CONST $@4 identifier_list SEMICOLON
+
+    VAR    shift, and go to state 11
+    CONST  shift, and go to state 12
+
+    $default  reduce using rule 16 (statement_list)
+
+    statement_list  go to state 13
+
+
+State 11
+
+    6 declarations: declarations VAR • $@3 identifier_list SEMICOLON
+
+    $default  reduce using rule 5 ($@3)
+
+    $@3  go to state 14
+
+
+State 12
+
+    8 declarations: declarations CONST • $@4 identifier_list SEMICOLON
+
+    $default  reduce using rule 7 ($@4)
+
+    $@4  go to state 15
+
+
+State 13
+
+    3 programa: $@1 VOID ID $@2 LPARENTHESIS RPARENTHESIS LBRACE declarations statement_list • RBRACE
+   17 statement_list: statement_list • statement
+
+    IF      shift, and go to state 16
+    WHILE   shift, and go to state 17
+    PRINT   shift, and go to state 18
+    READ    shift, and go to state 19
+    DO      shift, and go to state 20
+    FOR     shift, and go to state 21
+    LBRACE  shift, and go to state 22
+    RBRACE  shift, and go to state 23
+    ID      shift, and go to state 24
+
+    statement  go to state 25
+
+
+State 14
+
+    6 declarations: declarations VAR $@3 • identifier_list SEMICOLON
+
+    error  shift, and go to state 26
+    ID     shift, and go to state 27
+
+    identifier_list  go to state 28
+    asig             go to state 29
+
+
+State 15
+
+    8 declarations: declarations CONST $@4 • identifier_list SEMICOLON
+
+    error  shift, and go to state 26
+    ID     shift, and go to state 27
+
+    identifier_list  go to state 30
+    asig             go to state 29
+
+
+State 16
+
+   21 statement: IF • LPARENTHESIS expression RPARENTHESIS statement ELSE statement
+   22          | IF • LPARENTHESIS expression RPARENTHESIS statement
+
+    LPARENTHESIS  shift, and go to state 31
+
+
+State 17
+
+   23 statement: WHILE • LPARENTHESIS expression RPARENTHESIS statement
+
+    LPARENTHESIS  shift, and go to state 32
+
+
+State 18
+
+   27 statement: PRINT • print_list SEMICOLON
+
+    error         shift, and go to state 33
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    STRING        shift, and go to state 36
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    print_list  go to state 40
+    print_item  go to state 41
+    expression  go to state 42
+
+
+State 19
+
+   28 statement: READ • read_list SEMICOLON
+
+    error  shift, and go to state 43
+    ID     shift, and go to state 44
+
+    read_list  go to state 45
+
+
+State 20
+
+   24 statement: DO • statement WHILE LPARENTHESIS expression RPARENTHESIS
+
+    IF      shift, and go to state 16
+    WHILE   shift, and go to state 17
+    PRINT   shift, and go to state 18
+    READ    shift, and go to state 19
+    DO      shift, and go to state 20
+    FOR     shift, and go to state 21
+    LBRACE  shift, and go to state 22
+    ID      shift, and go to state 24
+
+    statement  go to state 46
+
+
+State 21
+
+   25 statement: FOR • LPARENTHESIS ID ASSIGN expression SEMICOLON expression SEMICOLON expression RPARENTHESIS statement
+   26          | FOR • LPARENTHESIS ID ASSIGN expression SEMICOLON expression RPARENTHESIS statement
+
+    LPARENTHESIS  shift, and go to state 47
+
+
+State 22
+
+   20 statement: LBRACE • statement_list RBRACE
+
+    $default  reduce using rule 16 (statement_list)
+
+    statement_list  go to state 48
+
+
+State 23
+
+    3 programa: $@1 VOID ID $@2 LPARENTHESIS RPARENTHESIS LBRACE declarations statement_list RBRACE •
+
+    $default  reduce using rule 3 (programa)
+
+
+State 24
+
+   19 statement: ID • $@6 ASSIGN expression SEMICOLON
+
+    $default  reduce using rule 18 ($@6)
+
+    $@6  go to state 49
+
+
+State 25
+
+   17 statement_list: statement_list statement •
+
+    $default  reduce using rule 17 (statement_list)
+
+
+State 26
+
+   12 identifier_list: error •
+
+    $default  reduce using rule 12 (identifier_list)
+
+
+State 27
+
+   13 asig: ID •
+   15     | ID • $@5 ASSIGN expression
+
+    ASSIGN    reduce using rule 14 ($@5)
+    $default  reduce using rule 13 (asig)
+
+    $@5  go to state 50
+
+
+State 28
+
+    6 declarations: declarations VAR $@3 identifier_list • SEMICOLON
+   10 identifier_list: identifier_list • COMMA asig
+   11                | identifier_list • COMMA error
+
+    SEMICOLON  shift, and go to state 51
+    COMMA      shift, and go to state 52
+
+
+State 29
+
+    9 identifier_list: asig •
+
+    $default  reduce using rule 9 (identifier_list)
+
+
+State 30
+
+    8 declarations: declarations CONST $@4 identifier_list • SEMICOLON
+   10 identifier_list: identifier_list • COMMA asig
+   11                | identifier_list • COMMA error
+
+    SEMICOLON  shift, and go to state 53
+    COMMA      shift, and go to state 52
+
+
+State 31
+
+   21 statement: IF LPARENTHESIS • expression RPARENTHESIS statement ELSE statement
+   22          | IF LPARENTHESIS • expression RPARENTHESIS statement
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 54
+
+
+State 32
+
+   23 statement: WHILE LPARENTHESIS • expression RPARENTHESIS statement
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 55
+
+
+State 33
+
+   32 print_list: error •
+
+    $default  reduce using rule 32 (print_list)
+
+
+State 34
+
+   51 expression: LPARENTHESIS • expression RPARENTHESIS
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 56
+
+
+State 35
+
+   52 expression: NUM •
+
+    $default  reduce using rule 52 (expression)
+
+
+State 36
+
+   34 print_item: STRING •
+
+    $default  reduce using rule 34 (print_item)
+
+
+State 37
+
+   53 expression: ID •
+
+    $default  reduce using rule 53 (expression)
+
+
+State 38
+
+   49 expression: MINUS • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 57
+
+
+State 39
+
+   50 expression: LOGICAL_NEG • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 58
+
+
+State 40
+
+   27 statement: PRINT print_list • SEMICOLON
+   30 print_list: print_list • COMMA print_item
+   31           | print_list • COMMA error
+
+    SEMICOLON  shift, and go to state 59
+    COMMA      shift, and go to state 60
+
+
+State 41
+
+   29 print_list: print_item •
+
+    $default  reduce using rule 29 (print_list)
+
+
+State 42
+
+   33 print_item: expression •
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    LTE     shift, and go to state 61
+    GTE     shift, and go to state 62
+    LT      shift, and go to state 63
+    GT      shift, and go to state 64
+    EQ      shift, and go to state 65
+    NEQ     shift, and go to state 66
+    PLUS    shift, and go to state 67
+    MINUS   shift, and go to state 68
+    MULT    shift, and go to state 69
+    DIVIDE  shift, and go to state 70
+
+    $default  reduce using rule 33 (print_item)
+
+
+State 43
+
+   38 read_list: error •
+
+    $default  reduce using rule 38 (read_list)
+
+
+State 44
+
+   35 read_list: ID •
+
+    $default  reduce using rule 35 (read_list)
+
+
+State 45
+
+   28 statement: READ read_list • SEMICOLON
+   36 read_list: read_list • COMMA ID
+   37          | read_list • COMMA error
+
+    SEMICOLON  shift, and go to state 71
+    COMMA      shift, and go to state 72
+
+
+State 46
+
+   24 statement: DO statement • WHILE LPARENTHESIS expression RPARENTHESIS
+
+    WHILE  shift, and go to state 73
+
+
+State 47
+
+   25 statement: FOR LPARENTHESIS • ID ASSIGN expression SEMICOLON expression SEMICOLON expression RPARENTHESIS statement
+   26          | FOR LPARENTHESIS • ID ASSIGN expression SEMICOLON expression RPARENTHESIS statement
+
+    ID  shift, and go to state 74
+
+
+State 48
+
+   17 statement_list: statement_list • statement
+   20 statement: LBRACE statement_list • RBRACE
+
+    IF      shift, and go to state 16
+    WHILE   shift, and go to state 17
+    PRINT   shift, and go to state 18
+    READ    shift, and go to state 19
+    DO      shift, and go to state 20
+    FOR     shift, and go to state 21
+    LBRACE  shift, and go to state 22
+    RBRACE  shift, and go to state 75
+    ID      shift, and go to state 24
+
+    statement  go to state 25
+
+
+State 49
+
+   19 statement: ID $@6 • ASSIGN expression SEMICOLON
+
+    ASSIGN  shift, and go to state 76
+
+
+State 50
+
+   15 asig: ID $@5 • ASSIGN expression
+
+    ASSIGN  shift, and go to state 77
+
+
+State 51
+
+    6 declarations: declarations VAR $@3 identifier_list SEMICOLON •
+
+    $default  reduce using rule 6 (declarations)
+
+
+State 52
+
+   10 identifier_list: identifier_list COMMA • asig
+   11                | identifier_list COMMA • error
+
+    error  shift, and go to state 78
+    ID     shift, and go to state 27
+
+    asig  go to state 79
+
+
+State 53
+
+    8 declarations: declarations CONST $@4 identifier_list SEMICOLON •
+
+    $default  reduce using rule 8 (declarations)
+
+
+State 54
+
+   21 statement: IF LPARENTHESIS expression • RPARENTHESIS statement ELSE statement
+   22          | IF LPARENTHESIS expression • RPARENTHESIS statement
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    RPARENTHESIS  shift, and go to state 80
+    LTE           shift, and go to state 61
+    GTE           shift, and go to state 62
+    LT            shift, and go to state 63
+    GT            shift, and go to state 64
+    EQ            shift, and go to state 65
+    NEQ           shift, and go to state 66
+    PLUS          shift, and go to state 67
+    MINUS         shift, and go to state 68
+    MULT          shift, and go to state 69
+    DIVIDE        shift, and go to state 70
+
+
+State 55
+
+   23 statement: WHILE LPARENTHESIS expression • RPARENTHESIS statement
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    RPARENTHESIS  shift, and go to state 81
+    LTE           shift, and go to state 61
+    GTE           shift, and go to state 62
+    LT            shift, and go to state 63
+    GT            shift, and go to state 64
+    EQ            shift, and go to state 65
+    NEQ           shift, and go to state 66
+    PLUS          shift, and go to state 67
+    MINUS         shift, and go to state 68
+    MULT          shift, and go to state 69
+    DIVIDE        shift, and go to state 70
+
+
+State 56
+
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+   51           | LPARENTHESIS expression • RPARENTHESIS
+
+    RPARENTHESIS  shift, and go to state 82
+    LTE           shift, and go to state 61
+    GTE           shift, and go to state 62
+    LT            shift, and go to state 63
+    GT            shift, and go to state 64
+    EQ            shift, and go to state 65
+    NEQ           shift, and go to state 66
+    PLUS          shift, and go to state 67
+    MINUS         shift, and go to state 68
+    MULT          shift, and go to state 69
+    DIVIDE        shift, and go to state 70
+
+
+State 57
+
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+   49           | MINUS expression •
+
+    $default  reduce using rule 49 (expression)
+
+
+State 58
+
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+   50           | LOGICAL_NEG expression •
+
+    $default  reduce using rule 50 (expression)
+
+
+State 59
+
+   27 statement: PRINT print_list SEMICOLON •
+
+    $default  reduce using rule 27 (statement)
+
+
+State 60
+
+   30 print_list: print_list COMMA • print_item
+   31           | print_list COMMA • error
+
+    error         shift, and go to state 83
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    STRING        shift, and go to state 36
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    print_item  go to state 84
+    expression  go to state 42
+
+
+State 61
+
+   39 expression: expression LTE • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 85
+
+
+State 62
+
+   40 expression: expression GTE • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 86
+
+
+State 63
+
+   41 expression: expression LT • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 87
+
+
+State 64
+
+   42 expression: expression GT • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 88
+
+
+State 65
+
+   43 expression: expression EQ • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 89
+
+
+State 66
+
+   44 expression: expression NEQ • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 90
+
+
+State 67
+
+   45 expression: expression PLUS • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 91
+
+
+State 68
+
+   46 expression: expression MINUS • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 92
+
+
+State 69
+
+   47 expression: expression MULT • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 93
+
+
+State 70
+
+   48 expression: expression DIVIDE • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 94
+
+
+State 71
+
+   28 statement: READ read_list SEMICOLON •
+
+    $default  reduce using rule 28 (statement)
+
+
+State 72
+
+   36 read_list: read_list COMMA • ID
+   37          | read_list COMMA • error
+
+    error  shift, and go to state 95
+    ID     shift, and go to state 96
+
+
+State 73
+
+   24 statement: DO statement WHILE • LPARENTHESIS expression RPARENTHESIS
+
+    LPARENTHESIS  shift, and go to state 97
+
+
+State 74
+
+   25 statement: FOR LPARENTHESIS ID • ASSIGN expression SEMICOLON expression SEMICOLON expression RPARENTHESIS statement
+   26          | FOR LPARENTHESIS ID • ASSIGN expression SEMICOLON expression RPARENTHESIS statement
+
+    ASSIGN  shift, and go to state 98
+
+
+State 75
+
+   20 statement: LBRACE statement_list RBRACE •
+
+    $default  reduce using rule 20 (statement)
+
+
+State 76
+
+   19 statement: ID $@6 ASSIGN • expression SEMICOLON
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 99
+
+
+State 77
+
+   15 asig: ID $@5 ASSIGN • expression
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 100
+
+
+State 78
+
+   11 identifier_list: identifier_list COMMA error •
+
+    $default  reduce using rule 11 (identifier_list)
+
+
+State 79
+
+   10 identifier_list: identifier_list COMMA asig •
+
+    $default  reduce using rule 10 (identifier_list)
+
+
+State 80
+
+   21 statement: IF LPARENTHESIS expression RPARENTHESIS • statement ELSE statement
+   22          | IF LPARENTHESIS expression RPARENTHESIS • statement
+
+    IF      shift, and go to state 16
+    WHILE   shift, and go to state 17
+    PRINT   shift, and go to state 18
+    READ    shift, and go to state 19
+    DO      shift, and go to state 20
+    FOR     shift, and go to state 21
+    LBRACE  shift, and go to state 22
+    ID      shift, and go to state 24
+
+    statement  go to state 101
+
+
+State 81
+
+   23 statement: WHILE LPARENTHESIS expression RPARENTHESIS • statement
+
+    IF      shift, and go to state 16
+    WHILE   shift, and go to state 17
+    PRINT   shift, and go to state 18
+    READ    shift, and go to state 19
+    DO      shift, and go to state 20
+    FOR     shift, and go to state 21
+    LBRACE  shift, and go to state 22
+    ID      shift, and go to state 24
+
+    statement  go to state 102
+
+
+State 82
+
+   51 expression: LPARENTHESIS expression RPARENTHESIS •
+
+    $default  reduce using rule 51 (expression)
+
+
+State 83
+
+   31 print_list: print_list COMMA error •
+
+    $default  reduce using rule 31 (print_list)
+
+
+State 84
+
+   30 print_list: print_list COMMA print_item •
+
+    $default  reduce using rule 30 (print_list)
+
+
+State 85
+
+   39 expression: expression • LTE expression
+   39           | expression LTE expression •
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    PLUS    shift, and go to state 67
+    MINUS   shift, and go to state 68
+    MULT    shift, and go to state 69
+    DIVIDE  shift, and go to state 70
+
+    $default  reduce using rule 39 (expression)
+
+
+State 86
+
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   40           | expression GTE expression •
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    PLUS    shift, and go to state 67
+    MINUS   shift, and go to state 68
+    MULT    shift, and go to state 69
+    DIVIDE  shift, and go to state 70
+
+    $default  reduce using rule 40 (expression)
+
+
+State 87
+
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   41           | expression LT expression •
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    PLUS    shift, and go to state 67
+    MINUS   shift, and go to state 68
+    MULT    shift, and go to state 69
+    DIVIDE  shift, and go to state 70
+
+    $default  reduce using rule 41 (expression)
+
+
+State 88
+
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   42           | expression GT expression •
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    PLUS    shift, and go to state 67
+    MINUS   shift, and go to state 68
+    MULT    shift, and go to state 69
+    DIVIDE  shift, and go to state 70
+
+    $default  reduce using rule 42 (expression)
+
+
+State 89
+
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   43           | expression EQ expression •
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    PLUS    shift, and go to state 67
+    MINUS   shift, and go to state 68
+    MULT    shift, and go to state 69
+    DIVIDE  shift, and go to state 70
+
+    $default  reduce using rule 43 (expression)
+
+
+State 90
+
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   44           | expression NEQ expression •
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    PLUS    shift, and go to state 67
+    MINUS   shift, and go to state 68
+    MULT    shift, and go to state 69
+    DIVIDE  shift, and go to state 70
+
+    $default  reduce using rule 44 (expression)
+
+
+State 91
+
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   45           | expression PLUS expression •
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    MULT    shift, and go to state 69
+    DIVIDE  shift, and go to state 70
+
+    $default  reduce using rule 45 (expression)
+
+
+State 92
+
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   46           | expression MINUS expression •
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    MULT    shift, and go to state 69
+    DIVIDE  shift, and go to state 70
+
+    $default  reduce using rule 46 (expression)
+
+
+State 93
+
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   47           | expression MULT expression •
+   48           | expression • DIVIDE expression
+
+    $default  reduce using rule 47 (expression)
+
+
+State 94
+
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+   48           | expression DIVIDE expression •
+
+    $default  reduce using rule 48 (expression)
+
+
+State 95
+
+   37 read_list: read_list COMMA error •
+
+    $default  reduce using rule 37 (read_list)
+
+
+State 96
+
+   36 read_list: read_list COMMA ID •
+
+    $default  reduce using rule 36 (read_list)
+
+
+State 97
+
+   24 statement: DO statement WHILE LPARENTHESIS • expression RPARENTHESIS
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 103
+
+
+State 98
+
+   25 statement: FOR LPARENTHESIS ID ASSIGN • expression SEMICOLON expression SEMICOLON expression RPARENTHESIS statement
+   26          | FOR LPARENTHESIS ID ASSIGN • expression SEMICOLON expression RPARENTHESIS statement
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 104
+
+
+State 99
+
+   19 statement: ID $@6 ASSIGN expression • SEMICOLON
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    SEMICOLON  shift, and go to state 105
+    LTE        shift, and go to state 61
+    GTE        shift, and go to state 62
+    LT         shift, and go to state 63
+    GT         shift, and go to state 64
+    EQ         shift, and go to state 65
+    NEQ        shift, and go to state 66
+    PLUS       shift, and go to state 67
+    MINUS      shift, and go to state 68
+    MULT       shift, and go to state 69
+    DIVIDE     shift, and go to state 70
+
+
+State 100
+
+   15 asig: ID $@5 ASSIGN expression •
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    LTE     shift, and go to state 61
+    GTE     shift, and go to state 62
+    LT      shift, and go to state 63
+    GT      shift, and go to state 64
+    EQ      shift, and go to state 65
+    NEQ     shift, and go to state 66
+    PLUS    shift, and go to state 67
+    MINUS   shift, and go to state 68
+    MULT    shift, and go to state 69
+    DIVIDE  shift, and go to state 70
+
+    $default  reduce using rule 15 (asig)
+
+
+State 101
+
+   21 statement: IF LPARENTHESIS expression RPARENTHESIS statement • ELSE statement
+   22          | IF LPARENTHESIS expression RPARENTHESIS statement •
+
+    ELSE  shift, and go to state 106
+
+    ELSE      [reduce using rule 22 (statement)]
+    $default  reduce using rule 22 (statement)
+
+
+State 102
+
+   23 statement: WHILE LPARENTHESIS expression RPARENTHESIS statement •
+
+    $default  reduce using rule 23 (statement)
+
+
+State 103
+
+   24 statement: DO statement WHILE LPARENTHESIS expression • RPARENTHESIS
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    RPARENTHESIS  shift, and go to state 107
+    LTE           shift, and go to state 61
+    GTE           shift, and go to state 62
+    LT            shift, and go to state 63
+    GT            shift, and go to state 64
+    EQ            shift, and go to state 65
+    NEQ           shift, and go to state 66
+    PLUS          shift, and go to state 67
+    MINUS         shift, and go to state 68
+    MULT          shift, and go to state 69
+    DIVIDE        shift, and go to state 70
+
+
+State 104
+
+   25 statement: FOR LPARENTHESIS ID ASSIGN expression • SEMICOLON expression SEMICOLON expression RPARENTHESIS statement
+   26          | FOR LPARENTHESIS ID ASSIGN expression • SEMICOLON expression RPARENTHESIS statement
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    SEMICOLON  shift, and go to state 108
+    LTE        shift, and go to state 61
+    GTE        shift, and go to state 62
+    LT         shift, and go to state 63
+    GT         shift, and go to state 64
+    EQ         shift, and go to state 65
+    NEQ        shift, and go to state 66
+    PLUS       shift, and go to state 67
+    MINUS      shift, and go to state 68
+    MULT       shift, and go to state 69
+    DIVIDE     shift, and go to state 70
+
+
+State 105
+
+   19 statement: ID $@6 ASSIGN expression SEMICOLON •
+
+    $default  reduce using rule 19 (statement)
+
+
+State 106
+
+   21 statement: IF LPARENTHESIS expression RPARENTHESIS statement ELSE • statement
+
+    IF      shift, and go to state 16
+    WHILE   shift, and go to state 17
+    PRINT   shift, and go to state 18
+    READ    shift, and go to state 19
+    DO      shift, and go to state 20
+    FOR     shift, and go to state 21
+    LBRACE  shift, and go to state 22
+    ID      shift, and go to state 24
+
+    statement  go to state 109
+
+
+State 107
+
+   24 statement: DO statement WHILE LPARENTHESIS expression RPARENTHESIS •
+
+    $default  reduce using rule 24 (statement)
+
+
+State 108
+
+   25 statement: FOR LPARENTHESIS ID ASSIGN expression SEMICOLON • expression SEMICOLON expression RPARENTHESIS statement
+   26          | FOR LPARENTHESIS ID ASSIGN expression SEMICOLON • expression RPARENTHESIS statement
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 110
+
+
+State 109
+
+   21 statement: IF LPARENTHESIS expression RPARENTHESIS statement ELSE statement •
+
+    $default  reduce using rule 21 (statement)
+
+
+State 110
+
+   25 statement: FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression • SEMICOLON expression RPARENTHESIS statement
+   26          | FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression • RPARENTHESIS statement
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    SEMICOLON     shift, and go to state 111
+    RPARENTHESIS  shift, and go to state 112
+    LTE           shift, and go to state 61
+    GTE           shift, and go to state 62
+    LT            shift, and go to state 63
+    GT            shift, and go to state 64
+    EQ            shift, and go to state 65
+    NEQ           shift, and go to state 66
+    PLUS          shift, and go to state 67
+    MINUS         shift, and go to state 68
+    MULT          shift, and go to state 69
+    DIVIDE        shift, and go to state 70
+
+
+State 111
+
+   25 statement: FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression SEMICOLON • expression RPARENTHESIS statement
+
+    LPARENTHESIS  shift, and go to state 34
+    NUM           shift, and go to state 35
+    ID            shift, and go to state 37
+    MINUS         shift, and go to state 38
+    LOGICAL_NEG   shift, and go to state 39
+
+    expression  go to state 113
+
+
+State 112
+
+   26 statement: FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression RPARENTHESIS • statement
+
+    IF      shift, and go to state 16
+    WHILE   shift, and go to state 17
+    PRINT   shift, and go to state 18
+    READ    shift, and go to state 19
+    DO      shift, and go to state 20
+    FOR     shift, and go to state 21
+    LBRACE  shift, and go to state 22
+    ID      shift, and go to state 24
+
+    statement  go to state 114
+
+
+State 113
+
+   25 statement: FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression SEMICOLON expression • RPARENTHESIS statement
+   39 expression: expression • LTE expression
+   40           | expression • GTE expression
+   41           | expression • LT expression
+   42           | expression • GT expression
+   43           | expression • EQ expression
+   44           | expression • NEQ expression
+   45           | expression • PLUS expression
+   46           | expression • MINUS expression
+   47           | expression • MULT expression
+   48           | expression • DIVIDE expression
+
+    RPARENTHESIS  shift, and go to state 115
+    LTE           shift, and go to state 61
+    GTE           shift, and go to state 62
+    LT            shift, and go to state 63
+    GT            shift, and go to state 64
+    EQ            shift, and go to state 65
+    NEQ           shift, and go to state 66
+    PLUS          shift, and go to state 67
+    MINUS         shift, and go to state 68
+    MULT          shift, and go to state 69
+    DIVIDE        shift, and go to state 70
+
+
+State 114
+
+   26 statement: FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression RPARENTHESIS statement •
+
+    $default  reduce using rule 26 (statement)
+
+
+State 115
+
+   25 statement: FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression SEMICOLON expression RPARENTHESIS • statement
+
+    IF      shift, and go to state 16
+    WHILE   shift, and go to state 17
+    PRINT   shift, and go to state 18
+    READ    shift, and go to state 19
+    DO      shift, and go to state 20
+    FOR     shift, and go to state 21
+    LBRACE  shift, and go to state 22
+    ID      shift, and go to state 24
+
+    statement  go to state 116
+
+
+State 116
+
+   25 statement: FOR LPARENTHESIS ID ASSIGN expression SEMICOLON expression SEMICOLON expression RPARENTHESIS statement •
+
+    $default  reduce using rule 25 (statement)

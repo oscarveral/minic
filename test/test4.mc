@@ -1,0 +1,4 @@
+"Cadena \
+multilínea \
+sin \
+cerrar

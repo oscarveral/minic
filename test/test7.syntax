@@ -1,0 +1,332 @@
+λ ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+NUM ----> expression
+ID ASSIGN expression ----> asig
+identifier_list COMMA asig ----> identifier_list
+NUM ----> expression
+ID ASSIGN expression ----> asig
+identifier_list COMMA asig ----> identifier_list
+NUM ----> expression
+ID ASSIGN expression ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+NUM ----> expression
+ID ASSIGN expression ----> asig
+identifier_list COMMA asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+NUM ----> expression
+ID ASSIGN expression ----> asig
+identifier_list COMMA asig ----> identifier_list
+NUM ----> expression
+ID ASSIGN expression ----> asig
+identifier_list COMMA asig ----> identifier_list
+NUM ----> expression
+ID ASSIGN expression ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+NUM ----> expression
+ID ASSIGN expression ----> asig
+identifier_list COMMA asig ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+NUM ----> expression
+ID ASSIGN expression ----> asig
+asig ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+λ ----> statement_list
+NUM ----> expression
+NUM ----> expression
+expression PLUS expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+expression PLUS expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+NUM ----> expression
+expression PLUS expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+NUM ----> expression
+NUM ----> expression
+expression PLUS expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+expression PLUS expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+expression PLUS expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+ID ----> expression
+expression PLUS expression ----> expression
+ID ----> expression
+ID ----> expression
+expression MULT expression ----> expression
+ID ----> expression
+expression DIVIDE expression ----> expression
+expression MINUS expression ----> expression
+ID ----> expression
+MINUS expression ----> expression
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+expression PLUS expression ----> expression
+ID ----> expression
+LOGICAL_NEG expression ----> expression
+LPARENTHESIS expression RPARENTHESIS ----> expression
+expression MINUS expression ----> expression
+expression LTE expression ----> expression
+ID ASSIGN expression SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+read_list COMMA ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+read_list COMMA ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+expression ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+expression ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+STRING ----> print_item
+print_item ----> print_list
+STRING ----> print_item
+print_list COMMA print_item ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+VOID ID LPARENTHESIS RPARENTHESIS LBRACE declarations statement_list RBRACE ----> programa

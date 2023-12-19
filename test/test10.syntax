@@ -1,0 +1,95 @@
+λ ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+ID ----> asig
+asig ----> identifier_list
+identifier_list COMMA error ----> identifier_list
+identifier_list COMMA error ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+identifier_list COMMA error ----> identifier_list
+identifier_list COMMA error ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+error ----> identifier_list
+error ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+identifier_list COMMA error ----> identifier_list
+ID ----> asig
+identifier_list COMMA asig ----> identifier_list
+identifier_list COMMA error ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+error ----> identifier_list
+error ----> identifier_list
+error ----> identifier_list
+identifier_list COMMA error ----> identifier_list
+error ----> identifier_list
+identifier_list COMMA error ----> identifier_list
+error ----> identifier_list
+declarations VAR identifier_list SEMICOLON ----> declarations
+error ----> identifier_list
+error ----> identifier_list
+declarations CONST identifier_list SEMICOLON ----> declarations
+λ ----> statement_list
+error ----> read_list
+read_list COMMA ID ----> read_list
+read_list COMMA ID ----> read_list
+read_list COMMA error ----> read_list
+read_list COMMA ID ----> read_list
+read_list COMMA error ----> read_list
+read_list COMMA ID ----> read_list
+read_list COMMA error ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> read_list
+read_list COMMA error ----> read_list
+read_list COMMA ID ----> read_list
+read_list COMMA error ----> read_list
+read_list COMMA ID ----> read_list
+read_list COMMA error ----> read_list
+read_list COMMA ID ----> read_list
+read_list COMMA error ----> read_list
+read_list COMMA ID ----> read_list
+READ read_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+ID ----> expression
+expression ----> print_item
+print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+print_list COMMA error ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+print_list COMMA error ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+print_list COMMA error ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
+error ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+print_list COMMA error ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+ID ----> expression
+expression ----> print_item
+print_list COMMA print_item ----> print_list
+print_list COMMA error ----> print_list
+print_list COMMA error ----> print_list
+PRINT print_list SEMICOLON ----> statement
+statement_list statement ----> statement_list
